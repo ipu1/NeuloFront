@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set minimum height to full viewport height */
   }
   
   .container {
@@ -13,8 +16,33 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Fill remaining space */
   }
   
+  .header {
+    background-color: #f5f5f5;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 50px;
+  }
+  
+  .header h1 span {
+    color: #ff4500; /* Change color as needed */
+  }
+  
+  .footer {
+    background-color: #d8d8d8;
+    color: #999999;
+    text-align: center;
+    padding: 0px 0;
+    margin-top: auto; /* Push footer to the bottom */
+  }
+
   h1 {
     color: #333;
   }
@@ -27,13 +55,13 @@ body {
     width: 150px;
     height: 76px;
     line-height: 78px;
-    font-size: 20px;
+    font-size: 20px; /* Default font size */
     font-family: 'Bebas Neue', sans-serif;
-    background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+    background: linear-gradient(45deg, transparent 5%, #ff802c 5%);
     border: 0;
     color: #fff;
     letter-spacing: 3px;
-    box-shadow: 6px 0px 0px #00E6F6;
+    box-shadow: 6px 0px 2px #ffbb6e;
     outline: transparent;
     position: relative;
     user-select: none;
@@ -45,6 +73,16 @@ body {
   .button-49 span {
     position: relative;
     z-index: 2;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 568px) {
+    .button-49 {
+      font-size: 12px; /* Decrease font size for smaller screens */
+      width: 120px; /* Decrease button width for smaller screens */
+      height: 60px; /* Decrease button height for smaller screens */
+      line-height: 62px; /* Adjust line height accordingly */
+    }
   }
   
   .button-49:after {
@@ -62,7 +100,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #ff3c01 5%);
     text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
     clip-path: var(--slice-0);
   }
@@ -119,10 +157,17 @@ body {
     }
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: 568px) {
     .button-49 {
       width: 200px;
       height: 86px;
       line-height: 88px;
     }
+  }
+  
+.logo {
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    margin: 20px auto; /* Adjust margin as needed */
+    display: block;
   }
